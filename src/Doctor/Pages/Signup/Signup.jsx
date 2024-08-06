@@ -45,7 +45,7 @@ const Signup = () => {
               By checking the box you agree to our <Link to="#">Terms and Conditions</Link>.
             </label>
           </div>
-          <button type="submit">Next <FaAngleRight/></button>
+          <button type="submit">Sign up <FaAngleRight/></button>
         </form>
         <p className='login-redirect'>Already a member? <Link to="/login">Log In</Link></p>
       </div>
