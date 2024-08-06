@@ -1,0 +1,119 @@
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.signup-box {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.signup-box .logo {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.signup-box .logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.signup-box .logo-des {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 17.57px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.signup-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 40px;
+  width: auto;
+  margin-bottom: 11px;
+}
+.signup-box form .form-input {
+  height: auto;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px;
+  padding-right: 30px;
+  margin: 10px 0;
+  border-radius: 7px;
+  background-color: var(--off-white);
+  border: none;
+}
+
+.input-wrap svg {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  color: var(--light-gray);
+}
+
+.signup-box .terms {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 65px;
+}
+
+.signup-box .terms label {
+  font-size: 8px;
+  font-weight: 400;
+  margin-left: 5px;
+  color: var(--text-color);
+}
+
+.signup-box .terms a {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.signup-box form button {
+  padding: 10px;
+  margin: 20px 0;
+  margin-bottom: 17px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--light-blue);
+  color: #fff;
+  font-size: 16px;
+}
+
+.signup-box form button svg {
+  margin: auto 0;
+  height: 13px;
+  width: 13px;
+  margin-bottom: -1.6px;
+  margin-left: 3px;
+}
+
+.signup-box .login-redirect {
+  font-size: 10px;
+}
+
+.signup-box .login-redirect a {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
