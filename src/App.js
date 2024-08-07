@@ -5,7 +5,7 @@ import { createBrowserRouter, Navigate, Outlet, RouterProvider, useLocation } fr
 // components for Doctor
 const Login = lazy(() => import("./Doctor/Pages/Login/Login"));
 const Signup = lazy(() => import("./Doctor/Pages/Signup/Signup"));
-const Home = lazy(() => import("./Doctor/Pages/Home/Home"));
+const PatientForm = lazy(() => import("./Doctor/Pages/PatientForm/PatientForm"));
 const DoctorHeader = lazy(() => import("./Doctor/Components/Navbar/Header"));
 
 
@@ -68,7 +68,7 @@ function App() {
             children: [
                 {
                 path: "/",
-                element: <Home />,
+                element: <PatientForm />,
                 },
             ],
         },
