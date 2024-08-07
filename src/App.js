@@ -5,8 +5,11 @@ import { createBrowserRouter, Navigate, Outlet, RouterProvider, useLocation } fr
 // components for Doctor
 const Login = lazy(() => import("./Doctor/Pages/Login/Login"));
 const Signup = lazy(() => import("./Doctor/Pages/Signup/Signup"));
-const PatientForm = lazy(() => import("./Doctor/Pages/PatientForm/PatientForm"));
 const DoctorHeader = lazy(() => import("./Doctor/Components/Navbar/Header"));
+
+const PatientForm = lazy(() => import("./Doctor/Pages/PatientForm/PatientForm"));
+const MedicineForm = lazy(() => import("./Doctor/Pages/MedicineForm/MedicineForm"));
+
 
 
 
@@ -67,8 +70,12 @@ function App() {
             ),
             children: [
                 {
-                path: "/",
-                element: <PatientForm />,
+                    path: "/",
+                    element: <PatientForm />,
+                },
+                {
+                    path: "/medicine-form",
+                    element: <MedicineForm />,
                 },
             ],
         },

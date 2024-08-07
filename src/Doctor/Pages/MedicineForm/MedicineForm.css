@@ -1,0 +1,185 @@
+.form-container {
+  width: 100%;
+  max-width: 406px;
+  margin: auto;
+  color: var(--off-white);
+}
+
+/* Top Form Number stapes */
+.form-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.form-number .number-border {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--dark-blue);
+  z-index: 1;
+}
+
+.form-number .num {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  text-align: center;
+  color: var(--off-white);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.form-number .num-dis {
+  background-color: var(--light-blue);
+}
+
+.form-number .line {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  width: 80%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: var(--light-blue);
+}
+/* _____end */
+
+.medicine-form {
+  padding: 20px 20px 0px 20px;
+  border-radius: 30px;
+  background-color: var(--dark-blue);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 5px rgb(82, 82, 82);
+}
+
+.medicine-form .form-title {
+  margin-bottom: 20px;
+}
+
+.medicine-form .form-title p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.medicine-section {
+  width: 100%;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  position: relative;
+  border-bottom: 1.5px solid var(--dark2-blue) ;
+}
+
+input,
+select {
+  width: 100%;
+  margin-bottom: 25px;
+  color: var(--off-white);
+  padding: 13px;
+  border-radius: 7px;
+  border: none;
+}
+
+.more-input-fields .field {
+  width: 50%;
+}
+.more-input-fields .sm-field {
+  margin-right: 10px;
+}
+.more-input-fields .sm-field2 {
+  margin-left: 10px;
+}
+
+.medicine-section .field select,
+input {
+  background-color: var(--dark2-blue);
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.medicine-section input::placeholder {
+  color: var(--light-gray);
+}
+
+.medicine-section input:hover {
+  border: none;
+}
+
+.medicine-section input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--light-blue);
+}
+
+.medicine-section select::placeholder {
+  color: var(--light-gray);
+}
+.medicine-section select:focus {
+  outline: none;
+}
+
+.more-input-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-button {
+  position: absolute;
+  top: 7px;
+  right: 2px;
+  background-color: #ff6161;
+  color: var(--off-white);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 60px;
+}
+.add-button svg {
+  height: 25px;
+  width: 25px;
+  color: var(--off-white);
+  margin-right: 5px;
+}
+
+.medicine-form .next-button {
+  padding: 20px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--light-blue);
+  color: #fff;
+  font-size: 18px;
+  text-align: right;
+  width: 100%;
+}
+
+.medicine-form .next-button svg {
+  margin: auto 0;
+  height: 20px;
+  width: 20px;
+  margin-bottom: -5px;
+  margin-left: 3px;
+}
