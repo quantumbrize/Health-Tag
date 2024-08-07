@@ -9,13 +9,15 @@ const DoctorHeader = lazy(() => import("./Doctor/Components/Navbar/Header"));
 
 const PatientForm = lazy(() => import("./Doctor/Pages/PatientForm/PatientForm"));
 const MedicineForm = lazy(() => import("./Doctor/Pages/MedicineForm/MedicineForm"));
+const DoctorForm = lazy(() => import("./Doctor/Pages/DoctorForm/DoctorForm"));
 
 
 
 
 function App() {
   // Get auth tokens from local storage
-    const currentDoctor = localStorage.getItem("doctorAuthToken");
+    // const currentDoctor = localStorage.getItem("doctorAuthToken");
+    const currentDoctor = true;
     const currentShop = localStorage.getItem("shopAuthToken");
 
   // Protected route component for doctor
@@ -76,6 +78,10 @@ function App() {
                 {
                     path: "/medicine-form",
                     element: <MedicineForm />,
+                },
+                {
+                    path: "/doctor-form",
+                    element: <DoctorForm />,
                 },
             ],
         },
