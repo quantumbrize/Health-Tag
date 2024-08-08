@@ -10,6 +10,7 @@ const DoctorHeader = lazy(() => import("./Doctor/Components/Navbar/Header"));
 const PatientForm = lazy(() => import("./Doctor/Pages/PatientForm/PatientForm"));
 const MedicineForm = lazy(() => import("./Doctor/Pages/MedicineForm/MedicineForm"));
 const DoctorForm = lazy(() => import("./Doctor/Pages/DoctorForm/DoctorForm"));
+const DoctorProfile = lazy(() => import("./Doctor/Pages/DoctorProfile/DoctorProfile"));
 
 
 
@@ -32,9 +33,12 @@ function App() {
         window.scrollTo(0, 0);
         }, [location.pathname]);
 
+        // Check DoctorProfile path
+        const isDoctorProfile = location.pathname === "/doctor/profile";
+
         return (
             <Suspense fallback={<div>Loading...</div>}>
-                <DoctorHeader />
+                {!isDoctorProfile && <DoctorHeader />}
                 <Outlet />
             </Suspense>
         );
@@ -82,6 +86,10 @@ function App() {
                 {
                     path: "/doctor-form",
                     element: <DoctorForm />,
+                },
+                {
+                    path: "/doctor/profile",
+                    element: <DoctorProfile />,
                 },
             ],
         },

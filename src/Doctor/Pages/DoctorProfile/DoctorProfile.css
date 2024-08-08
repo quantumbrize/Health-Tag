@@ -1,0 +1,127 @@
+.profile-container {
+  padding: 20px;
+  max-width: 420px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container .title {
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 15px;
+  object-fit: cover;
+}
+
+.profile-pic-input {
+  display: none;
+}
+
+.camera-btn svg {
+  position: absolute;
+  bottom: 7px;
+  right: 130px;
+  color: var(--transparent-gray);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  font-size: 16px;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+}
+
+.file-input {
+  display: block;
+}
+
+.file-input-inner {
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  gap: 15px;
+  height: 70px;
+}
+
+.file-input-wrap input {
+  display: none;
+}
+
+.file-input-wrap .file-label {
+  width: 130px;
+  border: 1px solid var(--gray);
+  padding: 11px 7px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.file-view {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: -9px;
+}
+
+.file-preview .remove-btn {
+  margin-top: -5px;
+  text-align: right;
+}
+.file-preview .remove-btn svg {
+  color: #ff1744;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.profile-container .update-btn {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 17px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--light-blue);
+  color: #fff;
+  font-size: 16px;
+}

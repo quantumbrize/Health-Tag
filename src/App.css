@@ -19,7 +19,9 @@ body {
   --dark-blue: #565abb;
   --dark2-blue: #6268c6;
   --light-blue: #a9aeff;
+  --gray: #ccc;
   --light-gray: #bbbbbb;
+  --transparent-gray: #2929296e;
   --off-white: #f1f1f1;
   --text-color: #252525;
 }
