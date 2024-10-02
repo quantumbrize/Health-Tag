@@ -1,0 +1,306 @@
+.form-container {
+  width: 100%;
+  max-width: 406px;
+  margin: auto;
+  color: var(--off-white);
+  padding-bottom: 20px;
+
+}
+/* Patient */
+.form-box {
+  padding: 20px 20px 0px 20px;
+  border-radius: 30px;
+  background-color: var(--dark-blue);
+  margin-top: 20px;
+  box-shadow: 0 7px 5px rgb(82, 82, 82);
+}
+
+.form-box .form-title {
+  margin-bottom: 20px;
+}
+
+.form-box .form-title p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.more-input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.more-input-wrap .input-wrap {
+  width: 50%;
+}
+
+.more-input-wrap .input-wrap:nth-child(2) {
+  margin-left: 5px;
+}
+
+.form-box form .form-input {
+  height: auto;
+  width: 100%;
+  font-size: 13px;
+  padding: 13px;
+  margin: 5px 0;
+  border-radius: 7px;
+  color: var(--off-white);
+  background-color: var(--dark2-blue);
+  border: none;
+}
+
+.form-box form .form-input::placeholder {
+  color: var(--light-gray);
+}
+
+.form-box form .form-input:hover {
+  border: none;
+}
+
+.form-box form .form-input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--light-blue);
+}
+
+
+/* Medicine */
+.medicine-form-shop {
+  margin-top: 20px;
+}
+
+.medicine-form-shop .form-title {
+  margin-bottom: 20px;
+}
+
+.medicine-form-shop .form-title p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.medicine-section {
+  width: 100%;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  position: relative;
+  border-bottom: 1.5px solid var(--dark2-blue) ;
+}
+
+input,
+select {
+  width: 100%;
+  margin-bottom: 25px;
+  color: var(--off-white);
+  padding: 13px;
+  border-radius: 7px;
+  border: none;
+}
+
+.more-input-fields .field {
+  width: 50%;
+}
+.more-input-fields .sm-field {
+  margin-right: 10px;
+}
+.more-input-fields .sm-field2 {
+  margin-left: 10px;
+}
+
+.medicine-section .field select,
+input {
+  background-color: var(--dark2-blue);
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.medicine-section input::placeholder {
+  color: var(--light-gray);
+}
+
+.medicine-section input:hover {
+  border: none;
+}
+
+.medicine-section input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--light-blue);
+}
+
+.medicine-section select::placeholder {
+  color: var(--light-gray);
+}
+.medicine-section select:focus {
+  outline: none;
+}
+
+.more-input-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Doctor */
+
+.doctor-box {
+  margin-top: 20px;
+}
+
+.doctor-box .form-title {
+  margin-bottom: 20px;
+}
+
+.doctor-box .form-title p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.doctor-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.more-input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.more-input-wrap .input-wrap {
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.more-input-wrap .input-wrap:nth-child(2) {
+  margin-left: 15px;
+}
+
+.doctor-box form .form-input {
+  height: auto;
+  width: 100%;
+  font-size: 13px;
+  padding: 13px;
+  margin: 5px 0;
+  border-radius: 7px;
+  color: var(--off-white);
+  background-color: var(--dark2-blue);
+  border: none;
+}
+
+.doctor-box form .form-input::placeholder {
+  color: var(--light-gray);
+}
+.doctor-box form .form-input:hover {
+  border: none;
+}
+.doctor-box form .form-input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--light-blue);
+}
+
+.doctor-box form select::placeholder {
+  color: var(--light-gray);
+}
+.doctor-box form select:focus {
+  outline: none;
+}
+
+.file-input label {
+  display: block;
+}
+.file-input .form-input {
+  display: none;
+}
+.file-input .file-label {
+  width: 100px;
+  background-color: var(--dark2-blue);
+  padding: 11px 3px;
+  border-radius: 10px;
+  margin-top: 7px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--off-white);
+  cursor: pointer;
+}
+
+.amount-section{
+  display: flex;
+  width: 80%;
+}
+.amount-section .col1 .field{
+  margin-right: 10px;
+}
+.amount-section .col1 .field input{
+  background-color: #fff;
+  color: red;
+}
+.amount-section .col1 .field input::placeholder{
+  color: red;
+}
+select {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  background-color: var(--dark2-blue);
+  color: var(--off-white);
+  padding: 13px;
+  border-radius: 7px;
+  border: none;
+}
+.signature{
+  height: 39px;
+  width: 85px;
+  margin:8px 0 0 15px;
+}
+.form-box form button {
+  margin: 0 auto;
+  width: 20rem;
+  padding: 13px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--light-blue);
+  color: #fff;
+  font-size: 15px;
+}
+
+.form-box form button svg {
+  margin: auto 0;
+  height: 20px;
+  width: 20px;
+  margin-bottom: -5px;
+  margin-left: 3px;
+}
+.form-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

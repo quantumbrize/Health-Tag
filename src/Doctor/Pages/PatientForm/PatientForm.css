@@ -126,6 +126,17 @@
 }
 
 .form-box form button {
+  /* padding: 20px;
+  margin-top: 8px;
+  margin-bottom: 15px; */
+  border: none;
+  border-radius: 15px;
+  background-color: var(--light-blue);
+  color: #fff;
+  font-size: 18px;
+  text-align: right;
+}
+.form-box form .form-btn {
   padding: 20px;
   margin-top: 8px;
   margin-bottom: 15px;
@@ -143,4 +154,9 @@
   width: 20px;
   margin-bottom: -5px;
   margin-left: 3px;
+}
+.form-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

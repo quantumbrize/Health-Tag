@@ -1,7 +1,7 @@
 import React from 'react'
 import './PatientForm.css';
 
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -10,8 +10,14 @@ function PatientForm() {
 
   const navigate = useNavigate()
 
-  const handleFormSubmit = () => {
-    navigate('/medicine-form');
+  const handleFormSubmit = (event) => {
+    event.preventDefault(); 
+    navigate('/doctor/medicine-form');
+  };
+
+  const handleBackClick = (event) => {
+    event.preventDefault();
+    navigate(-1);
   };
 
 
@@ -67,7 +73,10 @@ function PatientForm() {
               <input className="form-input" name='syndrome' type="tel" placeholder="Enter Patient’s Syndrome" />
             </div>
           </div>
-          <button type="submit">Next <HiOutlineArrowLongRight /></button>
+          <button className='form-btn'>
+            <span onClick={handleBackClick}><HiOutlineArrowLongLeft style={{ marginRight: '8px' }} />Back</span>
+            <span type="submit">Next <HiOutlineArrowLongRight /></span>
+          </button>
         </form>
       </div>
     </div>

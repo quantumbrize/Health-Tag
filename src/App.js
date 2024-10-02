@@ -6,10 +6,12 @@ import { createBrowserRouter, Navigate, Outlet, RouterProvider, useLocation } fr
 const Login = lazy(() => import("./Doctor/Pages/Login/Login"));
 const Signup = lazy(() => import("./Doctor/Pages/Signup/Signup"));
 const DoctorHeader = lazy(() => import("./Doctor/Components/Navbar/Header"));
+const ShopHeader = lazy(() => import("./Doctor/Components/ShopNav/ShopHeader"));
 
 const PatientForm = lazy(() => import("./Doctor/Pages/PatientForm/PatientForm"));
 const MedicineForm = lazy(() => import("./Doctor/Pages/MedicineForm/MedicineForm"));
 const DoctorForm = lazy(() => import("./Doctor/Pages/DoctorForm/DoctorForm"));
+const ShopDetails = lazy(() => import("./Doctor/Pages/ShopDetails/ShopDetails"));
 const DoctorProfile = lazy(() => import("./Doctor/Pages/DoctorProfile/DoctorProfile"));
 
 
@@ -19,7 +21,6 @@ function App() {
   // Get auth tokens from local storage
     // const currentDoctor = localStorage.getItem("doctorAuthToken");
     const currentDoctor = true;
-    const currentShop = localStorage.getItem("shopAuthToken");
 
   // Protected route component for doctor
     const ProtectedRouteDoctor = ({ children }) => {
@@ -33,32 +34,10 @@ function App() {
         window.scrollTo(0, 0);
         }, [location.pathname]);
 
-        // Check DoctorProfile path
-        const isDoctorProfile = location.pathname === "/doctor/profile";
 
         return (
             <Suspense fallback={<div>Loading...</div>}>
-                {!isDoctorProfile && <DoctorHeader />}
-                <Outlet />
-            </Suspense>
-        );
-    };
-
-  // Protected route component for shop
-    const ProtectedRouteShop = ({ children }) => {
-        return currentShop ? children : <Navigate to="/shop/login" />;
-    };
-
-  // Layout component for shop with header and outlet
-    const LayoutShop = () => {
-        const location = useLocation();
-        useEffect(() => {
-        window.scrollTo(0, 0);
-        }, [location.pathname]);
-
-        return (
-            <Suspense fallback={<div>Loading...</div>}>
-                <DoctorHeader />
+                {location.pathname.includes('/doctor') ? <DoctorHeader /> : <ShopHeader />}
                 <Outlet />
             </Suspense>
         );
@@ -68,7 +47,7 @@ function App() {
     const router = createBrowserRouter([
         // Doctor Routes
         {
-            path: "/",
+            path: "",
             element: (
                 <ProtectedRouteDoctor>
                 <LayoutDoctor />
@@ -76,11 +55,11 @@ function App() {
             ),
             children: [
                 {
-                    path: "/",
+                    path: "/doctor/patient",
                     element: <PatientForm />,
                 },
                 {
-                    path: "/medicine-form",
+                    path: "/doctor/medicine-form",
                     element: <MedicineForm />,
                 },
                 {
@@ -90,6 +69,10 @@ function App() {
                 {
                     path: "/doctor/profile",
                     element: <DoctorProfile />,
+                },
+                {
+                    path: "/shop-details",
+                    element: <ShopDetails />,
                 },
             ],
         },
@@ -110,29 +93,6 @@ function App() {
             ),
         },
 
-        // Shop Routes
-        {
-            path: "/shop",
-            element: (
-                <ProtectedRouteShop>
-                <LayoutShop />
-                </ProtectedRouteShop>
-            ),
-            children: [
-                {
-                path: "/shop",
-                /*, element: <ShopHome />*/
-                },
-            ],
-        },
-        {
-            path: "/shop/login",
-            element: (
-                <Suspense fallback={<div>Loading...</div>}>
-                {/* <ShopLogin /> */}
-                </Suspense>
-            ),
-        },
     ]);
 
     // Return the RouterProvider with the router

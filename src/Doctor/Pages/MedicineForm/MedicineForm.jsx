@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MedicineForm.css';
 
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { CiCirclePlus } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
 
@@ -30,11 +30,15 @@ const MedicineForm = () => {
 
     const navigate = useNavigate()
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (event) => {
+        event.preventDefault(); 
         navigate('/doctor-form');
-    };
-
-
+      };
+    
+      const handleBackClick = (event) => {
+        event.preventDefault();
+        navigate(-1);
+      };
 
     return (
         <div className="form-container">
@@ -103,7 +107,12 @@ const MedicineForm = () => {
                         </div>
                     ))}
                     <div className="add-button" onClick={handleAddMedicine}><CiCirclePlus /> Add More Medicine</div>
-                    <button className="next-button" type="submit">Next <HiOutlineArrowLongRight /></button>
+                    <button className="next-button" type="submit">
+                        <div className="next-button-inner">
+                            <span onClick={handleBackClick}><HiOutlineArrowLongLeft style={{ marginRight: '8px' }} />Back</span>
+                            <span>Next <HiOutlineArrowLongRight /></span>
+                        </div>
+                    </button>
                 </form>
             </div>
         </div>
