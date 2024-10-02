@@ -289,7 +289,7 @@ select {
   border-radius: 15px;
   background-color: var(--light-blue);
   color: #fff;
-  font-size: 15px;
+  font-size: 15px !important;
 }
 
 .form-box form button svg {
@@ -299,7 +299,7 @@ select {
   margin-bottom: -5px;
   margin-left: 3px;
 }
-.form-btn{
+.form-btn-shop{
   display: flex;
   align-items: center;
   justify-content: space-between;

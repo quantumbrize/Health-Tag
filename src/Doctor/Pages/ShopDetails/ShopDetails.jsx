@@ -192,7 +192,7 @@ function ShopDetails() {
                                     <img src={sign} alt="Sign" className="signature" />
                                 </div>
                             </div>
-                            <button className='form-btn'>
+                            <button className='form-btn-shop'>
                                 <span onClick={handleBackClick}><HiOutlineArrowLongLeft style={{ marginRight: '8px' }} />Back</span>
                                 <span>Total Amount 0</span>
                                 <span>Submit <HiOutlineArrowLongRight /></span>
