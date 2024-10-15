@@ -33,7 +33,7 @@ function App() {
         useEffect(() => {
         window.scrollTo(0, 0);
         }, [location.pathname]);
-
+       
 
         return (
             <Suspense fallback={<div>Loading...</div>}>
@@ -42,15 +42,17 @@ function App() {
             </Suspense>
         );
     };
+    
 
   // Define routes
     const router = createBrowserRouter([
         // Doctor Routes
         {
-            path: "",
+            path: "/",
             element: (
                 <ProtectedRouteDoctor>
                 <LayoutDoctor />
+                <Signup/>
                 </ProtectedRouteDoctor>
             ),
             children: [
