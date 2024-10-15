@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy, useEffect,useState } from "react";
 import { createBrowserRouter, Navigate, Outlet, RouterProvider, useLocation } from "react-router-dom";
 
 // components for Doctor
@@ -18,6 +18,7 @@ const DoctorProfile = lazy(() => import("./Doctor/Pages/DoctorProfile/DoctorProf
 
 
 function App() {
+    const [showSignup,setShowsignup]=useState(true)
   // Get auth tokens from local storage
     // const currentDoctor = localStorage.getItem("doctorAuthToken");
     const currentDoctor = true;
@@ -38,7 +39,9 @@ function App() {
         return (
             <Suspense fallback={<div>Loading...</div>}>
                 {location.pathname.includes('/doctor') ? <DoctorHeader /> : <ShopHeader />}
+                {location.pathname.includes('/doctor') || location.pathname.includes('/doctor-form') || location.pathname.includes('/shop-details') ? setShowsignup(false) : setShowsignup(true)}
                 <Outlet />
+                
             </Suspense>
         );
     };
@@ -52,7 +55,7 @@ function App() {
             element: (
                 <ProtectedRouteDoctor>
                 <LayoutDoctor />
-                <Signup/>
+                {showSignup && <Signup/>}
                 </ProtectedRouteDoctor>
             ),
             children: [
