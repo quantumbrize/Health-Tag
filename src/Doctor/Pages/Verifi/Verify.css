@@ -5,6 +5,56 @@
     background-color: cornsilk;
     position: relative;
     left: 36vw;
-    bottom: -8vh;
+    bottom: -10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
+}
+.verify form{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.pin{
+    height: 45%;
+    width: 95%;
+    border:2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.pin head{
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.pin div,label{
+    height: 22%;
+}
+.inputs{
+    width: 80%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.inputs input{
+    width: 18%;
+    height: 85%;
+}
+.pin *{
+    border: 2px solid red;
+}
+/* For Chrome, Safari, Edge, and Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
