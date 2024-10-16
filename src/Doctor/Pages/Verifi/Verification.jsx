@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useEffect,useRef ,useState} from 'react'
 const Verification = () => {
   const [time,updateTime]=useState(30)
-  const fst_in=useRef()
+  const [norep,setNorep]=useState(true)
   const {
     register,
     handleSubmit,
@@ -18,8 +18,23 @@ const Verification = () => {
   useEffect(()=>{
     let first=document.getElementById("n1")
     first.focus()
-    
   },[])
+  useEffect(() => {
+    let x;
+      x = setInterval(() => {
+        updateTime((prevTime) => {
+          if (prevTime <= 1) {
+            clearInterval(x);
+            return 0;
+          }
+          return prevTime - 1;
+        });
+      }, 1000);
+
+    // Cleanup interval when component unmounts
+    return () => clearInterval(x);
+  }, []); 
+
   return (
     <div className='verify'>
       <form action="" style={{height:"80%",width:"90%"}}>
