@@ -2,7 +2,7 @@
     height: 82vh;
     width: 30vw;
     border-radius: 10px;
-    background-color: cornsilk;
+    background-color: white;
     position: relative;
     left: 36vw;
     bottom: -10vh;
@@ -19,9 +19,8 @@
    align-items: center;
 }
 .pin{
-    height: 45%;
+    height: 50%;
     width: 95%;
-    border:2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,9 +42,10 @@
 .inputs input{
     width: 18%;
     height: 85%;
-}
-.pin *{
-    border: 2px solid red;
+    border: none;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: rgb(227, 228, 230);
 }
 /* For Chrome, Safari, Edge, and Opera */
 input[type=number]::-webkit-outer-spin-button,
