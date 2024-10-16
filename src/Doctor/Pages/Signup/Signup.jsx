@@ -1,6 +1,7 @@
 import React from 'react';
 import './Signup.css';
-import { Link } from 'react-router-dom';
+import { Link,Navigate } from 'react-router-dom';
+import { useState } from 'react';
 
 import pcd_logo from '../../Assets/pcd_logo.png'
 
@@ -13,6 +14,14 @@ import { FaAngleRight } from "react-icons/fa6";
 
 
 const Signup = () => {
+  const [redirect, setRedirect] = useState(false); 
+  const set_confirm=(e)=>{
+    e.preventDefault();
+    setRedirect(true);
+  }
+  if (redirect) {
+    return <Navigate to="/doctor/Verification" />;
+  }
 
   return (
     <div className="signup-container">
@@ -21,7 +30,7 @@ const Signup = () => {
           <img src={pcd_logo} alt="PCD Logo" />
         </div>
         <p className='logo-des'>by creating a free account.</p>
-        <form>
+        <form onSubmit={set_confirm}>
           <div className="input-wrap">
             <input className="form-input" type="text" placeholder="Full name" />
             <FiUser/>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './ShopDetails.css';
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
@@ -33,7 +33,18 @@ function ShopDetails() {
 
     const pcdOptions = ['PCD1', 'PCD2', 'PCD3'];
     const medicineOptions = ['Medicine1', 'Medicine2', 'Medicine3'];
-
+   useEffect(()=>{
+    let nodelist=document.getElementsByClassName("form-container")[0].getElementsByTagName("input")
+    let nodeArray=[...nodelist]
+    nodeArray.forEach(val=>{
+        val.readOnly=true
+    })
+    nodelist=document.getElementsByClassName("amount-section")[0].getElementsByTagName("input")
+    nodeArray=[...nodelist]
+    nodeArray.forEach(val=>{
+        val.readOnly=false
+    })
+   },[])
 
     return (
         <div className="form-container">
@@ -45,7 +56,7 @@ function ShopDetails() {
                 <form onSubmit={handleFormSubmit}>
                     <div className="input-wrap">
                         <label className='label' htmlFor="fname">First Name</label>
-                        <input className="form-input" name='fname' type="text" placeholder="Enter Patient’s First Name" />
+                        <input className="form-input" name='fname' type="text" placeholder="Enter Patient’s First Name"/>
                     </div>
                     <div className="input-wrap">
                         <label htmlFor="lname">Last Name</label>

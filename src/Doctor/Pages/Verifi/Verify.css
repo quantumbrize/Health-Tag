@@ -1,0 +1,10 @@
+.verify{
+    height: 82vh;
+    width: 30vw;
+    border-radius: 10px;
+    background-color: cornsilk;
+    position: relative;
+    left: 36vw;
+    bottom: -8vh;
+
+}

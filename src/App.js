@@ -13,12 +13,14 @@ const MedicineForm = lazy(() => import("./Doctor/Pages/MedicineForm/MedicineForm
 const DoctorForm = lazy(() => import("./Doctor/Pages/DoctorForm/DoctorForm"));
 const ShopDetails = lazy(() => import("./Doctor/Pages/ShopDetails/ShopDetails"));
 const DoctorProfile = lazy(() => import("./Doctor/Pages/DoctorProfile/DoctorProfile"));
+const Verification = lazy(()=>import("./Doctor/Pages/Verifi/Verification"));
 
 
 
 
 function App() {
-    const [showSignup,setShowsignup]=useState(true)
+    const [sign,showSign] =useState(true)
+    const [signdone,setSigndone] = useState(false)
   // Get auth tokens from local storage
     // const currentDoctor = localStorage.getItem("doctorAuthToken");
     const currentDoctor = true;
@@ -30,7 +32,7 @@ function App() {
 
   // Layout component for doctor with header and outlet
     const LayoutDoctor = () => {
-        const location = useLocation();
+       const location = useLocation();
         useEffect(() => {
         window.scrollTo(0, 0);
         }, [location.pathname]);
@@ -38,8 +40,8 @@ function App() {
 
         return (
             <Suspense fallback={<div>Loading...</div>}>
-                {location.pathname.includes('/doctor') ? <DoctorHeader /> : <ShopHeader />}
-                {location.pathname.includes('/doctor') || location.pathname.includes('/doctor-form') || location.pathname.includes('/shop-details') ? setShowsignup(false) : setShowsignup(true)}
+                {location.pathname.includes('/doctor')  ? signdone ? <DoctorHeader /> :"": signdone ? <ShopHeader /> :""}
+                {location.pathname.includes('/doctor') || location.pathname.includes('/Verification') || location.pathname.includes('/shop-details')? showSign(false): showSign(true)}
                 <Outlet />
                 
             </Suspense>
@@ -54,8 +56,8 @@ function App() {
             path: "/",
             element: (
                 <ProtectedRouteDoctor>
-                <LayoutDoctor />
-                {showSignup && <Signup/>}
+                    <LayoutDoctor/>
+                    {sign && <Signup/>}
                 </ProtectedRouteDoctor>
             ),
             children: [
@@ -79,6 +81,10 @@ function App() {
                     path: "/shop-details",
                     element: <ShopDetails />,
                 },
+                {
+                    path: "/doctor/Verification",
+                    element: <Verification/>,
+                },
             ],
         },
         {
@@ -93,7 +99,7 @@ function App() {
             path: "/signup",
             element: (
                 <Suspense fallback={<div>Loading...</div>}>
-                <Signup />
+                <Signup/>
                 </Suspense>
             ),
         },
