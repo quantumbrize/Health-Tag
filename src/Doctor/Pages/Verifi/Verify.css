@@ -26,9 +26,11 @@
     justify-content: space-between;
     align-items: center;
 }
-.pin head{
-    
+.pin .head{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.head{
+    left: -31%;
 }
 .pin div,label{
     height: 22%;
@@ -57,4 +59,59 @@ input[type=number]::-webkit-inner-spin-button {
 /* For Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+@media screen and (max-width:1150px) {
+    .verify{
+        width: 40vw;
+    }
+    
+}
+@media screen and (max-width:900px) {
+    .verify{
+        width: 60vw;
+        left: 25vw;
+    }
+    
+}
+@media screen and (max-width:700px) {
+    .head{
+        left: -28%;
+    }
+    
+}
+@media screen and (max-width:550px) {
+    .head{
+        left: -24%;
+    }
+    .verify{
+        width: 65vw;
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .head{
+        left: -21%;
+    }
+    .pin{
+        height: 60%;
+    }
+    .verify{
+        width: 70vw;
+        left: 15vw;
+    }
+    .inputs input{
+        height: 75%;
+    }
+    
+}
+@media screen and (max-width:390px) {
+    .head{
+        left: -18%;
+    }
+    .verify{
+        width: 80vw;
+        left: 11vw;
+    }
+    
+    
 }
