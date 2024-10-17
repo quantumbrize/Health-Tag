@@ -64,7 +64,7 @@ const Verification = () => {
       <form action="" style={{height:"80%",width:"90%"}} onSubmit={on_submit}>
       <div className="pin">
         <div className="head" style={{position:"relative"}}><h2>Almost there</h2></div>
-        <div style={{fontSize:"1em"}}>Please enter the 4-digit code sent to your email for verification</div>
+        <div className='tell' style={{fontSize:"1em"}}>Please enter the 4-digit code sent to your email for verification</div>
         <div className='inputs'>
         <input type="number"  id='n1' onChangeCapture={focus_next} onKeyDown={handlekeydown}   {...register("n1",{required:{value:true,message:"every box must be filled"},minLength:{value:1,message:"minimum 1 charecter"}})}/><input type="number" onChangeCapture={focus_next} onKeyDown={handlekeydown} {...register("n2",{required:{value:true,message:"every box must be filled"},minLength:{value:1}})}/><input type="number"  onChangeCapture={focus_next} onKeyDown={handlekeydown} {...register("n3",{required:{value:true,message:"every box must be filled"},minLength:{value:1}})}/><input type="number" onKeyDown={handlekeydown} {...register("n4",{required:{value:true,message:"every box must be filled"},minLength:{value:1}})}/>
       </div>

@@ -23,7 +23,7 @@ function ShopDetails() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        navigate('/doctor/patient');
+        navigate('/doctor/profile');
     };
 
     const handleBackClick = (event) => {
@@ -195,7 +195,7 @@ function ShopDetails() {
                             <button className='form-btn-shop'>
                                 <span onClick={handleBackClick}><HiOutlineArrowLongLeft style={{ marginRight: '8px' }} />Back</span>
                                 <span>Total Amount 0</span>
-                                <span>Submit <HiOutlineArrowLongRight /></span>
+                                <span onClick={navigate("/doctor/profile")}>Submit <HiOutlineArrowLongRight /></span>
                             </button>
                         </div>
                     </div>

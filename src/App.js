@@ -40,7 +40,7 @@ function App() {
 
         return (
             <Suspense fallback={<div>Loading...</div>}>
-                {location.pathname.includes('/doctor')  ? <DoctorHeader /> : location.pathname.includes("/shop")?<ShopHeader />:""}
+                {location.pathname.includes('/doctor')  ? location.pathname.includes("/doctor/profile") ?"":<DoctorHeader /> : location.pathname.includes("/shop")?<ShopHeader />:""}
                 {location.pathname.includes('/doctor') || location.pathname.includes('/Verification') || location.pathname.includes('/shop-details')? showSign(false): showSign(true)}
                 <Outlet />
                 

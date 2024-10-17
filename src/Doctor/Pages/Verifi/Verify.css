@@ -29,11 +29,17 @@
 .pin .head{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.pin div{
+    height: 22%;
+}
+.tell{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .head{
     left: -31%;
-}
-.pin div,label{
-    height: 22%;
+    display: block;
+    height: 15% !important;
 }
 .inputs{
     width: 80%;
@@ -48,6 +54,9 @@
     text-align: center;
     font-size: 1.2em;
     background-color: rgb(227, 228, 230);
+}
+.ask{
+
 }
 /* For Chrome, Safari, Edge, and Opera */
 input[type=number]::-webkit-outer-spin-button,
@@ -87,44 +96,80 @@ input[type=number] {
     }
     
 }
-@media screen and (max-width:550px) {
+@media screen and (max-width:580px) {
+    .pin{
+        height: 40% !important;
+    }
     .head{
-        left: -24%;
+        left: -31.5%;
+    }
+    .inputs{
+        width: 65%;
     }
     .verify{
-        width: 65vw;
+        width: 80vw;
+        left: 15vw;
     }
-    
+    .back-button{
+        width: 18%;
+    }
 }
 @media screen and (max-width:450px) {
     .head{
-        left: -21%;
+        left: -26%;
+        height: 10% !important;
+    }
+    .tell{
+        height: 15% !important;
     }
     .pin{
         height: 60%;
     }
     .verify{
-        width: 70vw;
+        width: 80vw;
         left: 15vw;
     }
     .inputs input{
         height: 75%;
     }
     .back-button{
-        width: 24%;
+        width: 22%;
     }
     
 }
 @media screen and (max-width:390px) {
     .head{
-        left: -18%;
+        left: -25%;
+        height: 10%;
+    }
+    .ask{
+        font-size: 0.9em;
     }
     .verify{
-        width: 80vw;
-        left: 11vw;
+        width: 95vw;
+        left: 6vw;
     }
     .back-button{
-        width: 21%;
+        width: 19%;
+    }
+    
+}
+@media screen and (max-width:330px){
+    .head{
+        left: -21%;
+    }
+    .verify{
+        width: 98vw !important;
+        left: 2vw;
+    }
+    .ask{
+        font-size: 0.8em;
+    }
+    
+}
+@media screen and (max-height:700px) {
+    .pin{
+        height: 55% !important;
     }
     
 }
