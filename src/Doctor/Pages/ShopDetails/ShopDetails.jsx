@@ -33,18 +33,7 @@ function ShopDetails() {
 
     const pcdOptions = ['PCD1', 'PCD2', 'PCD3'];
     const medicineOptions = ['Medicine1', 'Medicine2', 'Medicine3'];
-   useEffect(()=>{
-    let nodelist=document.getElementsByClassName("form-container")[0].getElementsByTagName("input")
-    let nodeArray=[...nodelist]
-    nodeArray.forEach(val=>{
-        val.readOnly=true
-    })
-    nodelist=document.getElementsByClassName("amount-section")[0].getElementsByTagName("input")
-    nodeArray=[...nodelist]
-    nodeArray.forEach(val=>{
-        val.readOnly=false
-    })
-   },[])
+   
 
     return (
         <div className="form-container">

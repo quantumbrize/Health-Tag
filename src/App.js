@@ -40,7 +40,7 @@ function App() {
 
         return (
             <Suspense fallback={<div>Loading...</div>}>
-                {location.pathname.includes('/doctor')  ? signdone ? <DoctorHeader /> :"": signdone ? <ShopHeader /> :""}
+                {location.pathname.includes('/doctor')  ? <DoctorHeader /> : location.pathname.includes("/shop")?<ShopHeader />:""}
                 {location.pathname.includes('/doctor') || location.pathname.includes('/Verification') || location.pathname.includes('/shop-details')? showSign(false): showSign(true)}
                 <Outlet />
                 
@@ -48,7 +48,6 @@ function App() {
         );
     };
     
-
   // Define routes
     const router = createBrowserRouter([
         // Doctor Routes
@@ -82,8 +81,8 @@ function App() {
                     element: <ShopDetails />,
                 },
                 {
-                    path: "/doctor/Verification",
-                    element: <Verification setSing={setSigndone}/>,
+                    path: "/Verification",
+                    element: <Verification/>,
                 },
             ],
         },

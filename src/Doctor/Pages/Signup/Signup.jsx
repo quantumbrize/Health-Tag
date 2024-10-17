@@ -20,7 +20,7 @@ const Signup = () => {
     setRedirect(true);
   }
   if (redirect) {
-    return <Navigate to="/doctor/Verification" />;
+    return <Navigate to="/Verification" />;
   }
 
   return (

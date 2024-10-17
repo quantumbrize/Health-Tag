@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Verify.css"
 import { useForm } from 'react-hook-form'
-import { useEffect,useRef ,useState} from 'react'
+import { useEffect,useState} from 'react'
 import { FaAngleLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const Verification = () => {
@@ -45,7 +45,7 @@ const Verification = () => {
 
   updateTime(30)
  }
- const on_submit=(e)=>{
+ const on_submit=async (e)=>{
   e.preventDefault()
   window.location="/login"
  }

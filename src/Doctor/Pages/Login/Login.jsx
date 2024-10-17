@@ -12,7 +12,7 @@ import { FaAngleRight,FaAngleLeft } from "react-icons/fa6";
 
 const Login = () => {
   const to_verify=()=>{
-    window.location="/doctor/Verification"
+    window.location="/Verification"
   }
   const trav_to_patent=(e)=>{
     e.preventDefault()
