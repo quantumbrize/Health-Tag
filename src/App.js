@@ -83,7 +83,7 @@ function App() {
                 },
                 {
                     path: "/doctor/Verification",
-                    element: <Verification/>,
+                    element: <Verification setSing={setSigndone}/>,
                 },
             ],
         },

@@ -6,12 +6,15 @@ import pcd_logo from '../../Assets/pcd_logo.png'
 
 import { HiOutlineMail } from "react-icons/hi";
 import { GoLock } from "react-icons/go";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight,FaAngleLeft } from "react-icons/fa6";
 
 
 
 const Login = () => {
-
+  const trav_to_patent=(e)=>{
+    e.preventDefault()
+    window.location="/doctor/patient"
+  }
   return (
     <div className="login-container">
       <div className="login-box">
@@ -20,7 +23,7 @@ const Login = () => {
         </div>
         <p className='logo-title'>Welcome back</p>
         <p className='logo-des'>sign in to access your account</p>
-        <form>
+        <form onSubmit={trav_to_patent}>
           <div className="input-wrap">
             <input className="form-input" type="email" placeholder="Email" />
             <HiOutlineMail />
@@ -41,6 +44,8 @@ const Login = () => {
         </form>
         <p className='login-redirect'>New member? <Link to="/signup"> Register Now</Link></p>
       </div>
+      <Link className='back-button' style={{position:"absolute",height:"9%",backgroundColor:"black",bottom:"-4%",left:"42%",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",color:"white"}} to={"/signup"}> <FaAngleLeft/> </Link>
+      
     </div>
   );
 };

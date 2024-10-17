@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Verify.css"
 import { useForm } from 'react-hook-form'
-import { useEffect,useState} from 'react'
+import { useEffect,useRef ,useState} from 'react'
+import { FaAngleLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { FaAngleLeft } from 'react-icons/fa6'
 const Verification = () => {
   const [time,updateTime]=useState(30)
   const [norep,setNorep]=useState(true)
+
   const {
     register,
     handleSubmit,
@@ -16,12 +17,6 @@ const Verification = () => {
   }=useForm()
   const focus_next=async (e)=>{
      e.target.nextElementSibling.focus()
-  }
-  const on_submit=(e)=>{
-    e.preventDefault();
-    // <Navigate to="/login"/>
-    window.location="/login"
-     console.log(e.target)
   }
   useEffect(()=>{
     let first=document.getElementById("n1")
@@ -50,6 +45,10 @@ const Verification = () => {
 
   updateTime(30)
  }
+ const on_submit=(e)=>{
+  e.preventDefault()
+  window.location="/login"
+ }
  const handlekeydown=async (e)=>{
   await new Promise((resolve,reject)=>{
     setTimeout(()=>{
@@ -57,11 +56,6 @@ const Verification = () => {
     },50)
   })
   if(e.key==='Backspace' || e.key==='Delete'){
-    // if(e.target.id==="n1"){
-    //   console.log("erfr")
-    // return
-    // }
-    console.log(e.previousElementSibling)
     e.target.previousElementSibling ? e.target.previousElementSibling.focus():e.target.focus()
   }
  }
