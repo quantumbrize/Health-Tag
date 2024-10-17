@@ -80,7 +80,7 @@ const Verification = () => {
       </div>
       <button style={{width:"90%",height:"9%",backgroundColor:"rgb(204, 149, 245)",border:"none",color:"white",borderRadius:"5px",fontSize:"1.2em"}} type='submit'>Verify</button>
       </form>
-      <Link style={{position:"absolute",height:"9%",width:"12%",backgroundColor:"black",bottom:"-2%",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",color:"white"}} to={"/signup"}> <FaAngleLeft/> </Link>
+      <Link className='back-button' style={{position:"absolute",height:"9%",backgroundColor:"black",bottom:"-2%",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",color:"white"}} to={"/signup"}> <FaAngleLeft/> </Link>
     </div>
   )
 }

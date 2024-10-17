@@ -55,7 +55,9 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+.back-button{
+    width: 12%;
+}
 /* For Firefox */
 input[type=number] {
     -moz-appearance: textfield;
@@ -64,12 +66,18 @@ input[type=number] {
     .verify{
         width: 40vw;
     }
+    .back-button{
+        width: 19%;
+    }
     
 }
 @media screen and (max-width:900px) {
     .verify{
         width: 60vw;
         left: 25vw;
+    }
+    .back-button{
+        width: 21%;
     }
     
 }
@@ -102,6 +110,9 @@ input[type=number] {
     .inputs input{
         height: 75%;
     }
+    .back-button{
+        width: 24%;
+    }
     
 }
 @media screen and (max-width:390px) {
@@ -112,6 +123,8 @@ input[type=number] {
         width: 80vw;
         left: 11vw;
     }
-    
+    .back-button{
+        width: 21%;
+    }
     
 }
