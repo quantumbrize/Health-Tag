@@ -11,6 +11,9 @@ import { FaAngleRight,FaAngleLeft } from "react-icons/fa6";
 
 
 const Login = () => {
+  const to_verify=()=>{
+    window.location="/doctor/Verification"
+  }
   const trav_to_patent=(e)=>{
     e.preventDefault()
     window.location="/doctor/patient"
@@ -44,7 +47,7 @@ const Login = () => {
         </form>
         <p className='login-redirect'>New member? <Link to="/signup"> Register Now</Link></p>
       </div>
-      <Link className='back-button' style={{position:"absolute",height:"9%",backgroundColor:"black",bottom:"-4%",left:"42%",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",color:"white"}} to={"/signup"}> <FaAngleLeft/> </Link>
+      <Link onClick={to_verify} className='back-button' style={{position:"absolute",height:"9%",backgroundColor:"black",bottom:"-4%",left:"42%",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",color:"white"}}> <FaAngleLeft/> </Link>
       
     </div>
   );
