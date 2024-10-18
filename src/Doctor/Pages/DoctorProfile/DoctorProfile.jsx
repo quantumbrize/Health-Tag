@@ -39,9 +39,6 @@ const DoctorProfile = () => {
     const triggerFileInput = () => {
         document.getElementById('profilePicInput').click();
     };
-    const to_shop=()=>{
-        Navigate("/shop-details")
-    }
     return (
         <div className="profile-container">
             <div className="profile-header">
@@ -93,7 +90,7 @@ const DoctorProfile = () => {
                     </div>
                 </div>
             </div>
-            <button onClick={to_shop} className="update-btn" >Update</button>
+            <button  className="update-btn" >Update</button>
         </div>
     );
 };

@@ -23,6 +23,7 @@ function ShopDetails() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
+        navigate("/")
     };
 
     const handleBackClick = (event) => {

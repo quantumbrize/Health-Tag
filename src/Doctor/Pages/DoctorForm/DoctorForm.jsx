@@ -12,7 +12,7 @@ function DoctorForm() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault(); 
-    navigate('/doctor/profile');
+    navigate('/shop-details');
   };
 
   const handleBackClick = (event) => {
