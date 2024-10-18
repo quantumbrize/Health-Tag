@@ -71,14 +71,23 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+.c-verify{
+
+}
 @media screen and (max-width:1150px) {
     .verify{
         width: 40vw;
     }
     .back-button{
         width: 19%;
+        bottom: 20% !important;
     }
-    
+    .c-verify{
+        position: absolute !important;
+        bottom: 37%;
+        width: 60% !important;
+        height: 8% !important;
+    }
 }
 @media screen and (max-width:900px) {
     .verify{
@@ -105,6 +114,7 @@ input[type=number] {
     }
     .inputs{
         width: 65%;
+        height: 20% !important;
     }
     .verify{
         width: 80vw;
@@ -182,7 +192,13 @@ input[type=number] {
     }
     
 }
-@media screen and (max-width:750px) and (max-height:1200px){
+@media screen and (max-height:1200px) {
+    .inputs{
+        height: 18% !important;
+    }
+    
+}
+/* @media screen and (max-width:750px) and (max-height:1200px){
     .inputs{
         height: 18% !important;
     }
@@ -190,4 +206,4 @@ input[type=number] {
         font-size: 1.2em !important;
     }
     
-}
+} */

@@ -72,7 +72,7 @@ const Verification = () => {
       <div className="resend" style={{textAlign:"center",height:"10%"}}>Request new code in 00:{time}s</div>
       </div>
       </div>
-      <button style={{width:"90%",height:"9%",backgroundColor:"rgb(204, 149, 245)",border:"none",color:"white",borderRadius:"5px",fontSize:"1.2em"}} type='submit'>Verify</button>
+      <button className='c-verify' style={{width:"90%",height:"9%",backgroundColor:"rgb(204, 149, 245)",border:"none",color:"white",borderRadius:"5px",fontSize:"1.2em"}} type='submit'>Verify</button>
       </form>
       <Link className='back-button' style={{position:"absolute",height:"9%",backgroundColor:"black",bottom:"-2%",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",color:"white"}} to={"/signup"}> <FaAngleLeft/> </Link>
     </div>
