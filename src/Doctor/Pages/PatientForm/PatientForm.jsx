@@ -1,5 +1,5 @@
 import React from 'react'
-import './PatientForm.css';
+import "./PatientForm.css";
 
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useNavigate } from 'react-router-dom';
