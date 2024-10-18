@@ -5,6 +5,7 @@ import default_profile from '../../Assets/default-profile.jpg'
 import { MdCameraAlt } from "react-icons/md";
 // import { RiDeleteBin5Fill } from "react-icons/ri";
 import { TiDelete } from "react-icons/ti";
+import { useNavigate } from 'react-router-dom';
 
 
 const DoctorProfile = () => {
@@ -15,6 +16,8 @@ const DoctorProfile = () => {
     const [shop, setShop] = useState('');
     const [documents, setDocuments] = useState([]);
     const [profilePic, setProfilePic] = useState('');
+    
+    const Navigate=useNavigate()
 
     const handleFileChange = (event) => {
         const files = Array.from(event.target.files);
@@ -36,7 +39,9 @@ const DoctorProfile = () => {
     const triggerFileInput = () => {
         document.getElementById('profilePicInput').click();
     };
-
+    const to_shop=()=>{
+        Navigate("/shop-details")
+    }
     return (
         <div className="profile-container">
             <div className="profile-header">
@@ -88,7 +93,7 @@ const DoctorProfile = () => {
                     </div>
                 </div>
             </div>
-            <button className="update-btn">Update</button>
+            <button onClick={to_shop} className="update-btn" >Update</button>
         </div>
     );
 };

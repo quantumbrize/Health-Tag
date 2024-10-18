@@ -126,8 +126,8 @@ input[type=number] {
         height: 60%;
     }
     .verify{
-        width: 80vw;
-        left: 15vw;
+        width: 85vw;
+        left: 10vw;
     }
     .inputs input{
         height: 75%;
@@ -170,6 +170,15 @@ input[type=number] {
 @media screen and (max-height:700px) {
     .pin{
         height: 55% !important;
+    }
+    .back-button{
+        width: 16%;
+    }
+    
+}
+@media screen and (max-width:1100px) and (max-height:550px) {
+    .back-button{
+        width: 11%;
     }
     
 }

@@ -23,7 +23,6 @@ function ShopDetails() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        navigate('/doctor/profile');
     };
 
     const handleBackClick = (event) => {
