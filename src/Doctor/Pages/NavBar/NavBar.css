@@ -1,0 +1,49 @@
+/* Main Navbar Styling */
+.navbar {
+    position: fixed;       /* Sticks the navbar to the viewport */
+    bottom: 0;             /* Aligns it to the bottom of the screen */
+    left: 0;               /* Stretches it from the left side */
+    right: 0;              /* Stretches it to the right side */
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+    z-index: 1000;         /* Ensures it's above other content */
+    padding: 10px 0;       /* Adjust padding */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;  /* Evenly spaces the items */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .nav-icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Adds hover effect */
+  }
+  
+  .nav-icon:hover {
+    transform: scale(1.2); /* Enlarges on hover */
+    color: #0733ab;        /* Color change on hover */
+  }
+  
+  .whatsapp-icon {
+    color: #25d366; /* WhatsApp color */
+  }
+  
+  .whatsapp-icon:hover {
+    color: #128c7e; /* Darker WhatsApp color on hover */
+  }
+  

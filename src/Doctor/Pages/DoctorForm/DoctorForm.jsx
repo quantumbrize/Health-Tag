@@ -3,7 +3,7 @@ import './DoctorForm.css';
 
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useNavigate } from 'react-router-dom';
-
+import NavBar from '../NavBar/NavBar'; // Import the NavBar
 
 
 function DoctorForm() {
@@ -78,6 +78,8 @@ function DoctorForm() {
           </button>
         </form>
       </div>
+      {/* Include the NavBar here at the bottom */}
+      <NavBar />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import './MedicineForm.css';
 import { HiOutlineArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { CiCirclePlus } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
-
+import NavBar from '../NavBar/NavBar'; // Import the NavBar
 
 
 const MedicineForm = () => {
@@ -115,6 +115,8 @@ const MedicineForm = () => {
                     </button>
                 </form>
             </div>
+            {/* Include the NavBar here at the bottom */}
+      <NavBar />
         </div>
     );
 };
